@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_view_league"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="View League" />
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Privacy" />
+        <item
+            android:id="@+id/nav_help_support"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Help and Support" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Logout" />
+        </menu>
+    </group>
+
+</menu>
