@@ -2,32 +2,33 @@ package com.ryansapps.ontheball.Model;
 
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 /**
- * What to Expect (QB):
+ * Stats available from api (QB):
  *
  * {
- *      "playerId":"14","completions":"422","attempts":"640",
- *      "passingYards":"4992","passingTD":"40","passingInt":"17",
- *      "rushYards":"28","rushTD":"1","fantasyPoints":"335",
- *      "displayName":"Drew Brees","team":"NO"
+ *      "playerId":"14",
+ *      "completions":"422",
+ *      "attempts":"640",
+ *      "passingYards":"4992",
+ *      "passingTD":"40",
+ *      "passingInt":"17",
+ *      "rushYards":"28",
+ *      "rushTD":"1",
+ *      "fantasyPoints":"335",
+ *      "displayName":"Drew Brees",
+ *      "team":"NO"
  * },
  *
  * @author ryan
  */
 
-public class Players {
-    @SerializedName("displayName")
-    protected String displayName;
-    @SerializedName("fantasyPoints")
-    protected String fantasyPoints;
-    @SerializedName("team")
-    protected String team;
+public class Players extends RealmObject {
 
-    public Players(String displayName, String fantasyPoints, String team) {
-        this.displayName = displayName;
-        this.fantasyPoints = fantasyPoints;
-        this.team = team;
-    }
+    private String displayName;
+    private String fantasyPoints;
+    private String team;
 
     public String getFantasyPoints() {
         return fantasyPoints;

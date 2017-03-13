@@ -73,12 +73,11 @@ public class SelectionFragment extends Fragment {
                 initFragment();
             }
         });
-        //todo Kicker endpoint?
         k_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //SelectionFragment.myBundle.putString("user_selection", String.valueOf(k_btn.getText()));
-                //initFragment();
+                SelectionFragment.myBundle.putString("user_selection", String.valueOf(k_btn.getText()));
+                initFragment();
             }
         });
     }

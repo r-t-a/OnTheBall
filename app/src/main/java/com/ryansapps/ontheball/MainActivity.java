@@ -17,6 +17,8 @@ import com.ryansapps.ontheball.Views.SelectionFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 /**
  * @author ryan
@@ -29,14 +31,27 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.nav_view) NavigationView navigationView;
     @BindView(R.id.master_ranks) Button masterRank;
     private static String TAG = "MainActivity";
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        Realm.init(this);
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().build();
+        Realm.deleteRealm(realmConfiguration);
+        realm = Realm.getInstance(realmConfiguration);
+
         initViews();
         initControls();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close();
     }
 
     @Override
