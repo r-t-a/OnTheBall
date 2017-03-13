@@ -4,33 +4,30 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_view_league"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_league"
             android:title="View League" />
         <item
             android:id="@+id/nav_my_profile"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_profile"
             android:title="My Profile" />
-        <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Settings" />
-        <item
-            android:id="@+id/nav_privacy"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Privacy" />
-        <item
-            android:id="@+id/nav_help_support"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Help and Support" />
     </group>
 
-    <group android:checkableBehavior="single">
-        <menu>
-            <item
-                android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Logout" />
-        </menu>
-    </group>
-
+    <item android:title="Options">
+        <group android:checkableBehavior="single">
+            <menu>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_menu_settings"
+                    android:title="Settings" />
+                <item
+                    android:id="@+id/nav_help_support"
+                    android:icon="@drawable/ic_menu_help"
+                    android:title="Help and Support" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_action_logout"
+                    android:title="Logout" />
+            </menu>
+        </group>
+    </item>
 </menu>

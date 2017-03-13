@@ -3,10 +3,10 @@
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     android:gravity="center"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:id="@+id/content_selection">
 
     <GridLayout
-        android:id="@+id/contentSelection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

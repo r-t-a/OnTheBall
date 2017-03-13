@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
-    android:id="@+id/contentMain"
+    android:id="@+id/content_main"
     tools:showIn="@layout/activity_main"
     tools:context=".MainActivity">
 

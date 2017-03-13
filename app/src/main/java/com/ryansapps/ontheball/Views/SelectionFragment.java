@@ -24,14 +24,13 @@ public class SelectionFragment extends Fragment {
     @BindView(R.id.te_btn) Button te_btn;
     @BindView(R.id.def_btn) Button def_btn;
     @BindView(R.id.k_btn) Button k_btn;
-    private View view;
     private static String TAG = "SelectionFragment";
     public static Bundle myBundle = new Bundle();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.content_selection, container, false);
+        View view = inflater.inflate(R.layout.content_selection, container, false);
         ButterKnife.bind(this, view);
         initControls();
         return view;
@@ -86,6 +85,6 @@ public class SelectionFragment extends Fragment {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         FantasyListFragment fragment = new FantasyListFragment();
         transaction.addToBackStack(TAG);
-        transaction.replace(R.id.contentMain, fragment).commit();
+        transaction.replace(R.id.content_main, fragment).commit();
     }
 }

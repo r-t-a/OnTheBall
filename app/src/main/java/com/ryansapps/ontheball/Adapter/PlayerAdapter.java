@@ -49,7 +49,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
 
     @Override
     public void onBindViewHolder(PlayerViewHolder holder, int position) {
-        holder.playerName.setText(playerList.get(position).getName());
+        holder.playerName.setText(playerList.get(position).getDisplayName());
         holder.fantasyPoints.setText(playerList.get(position).getFantasyPoints());
         holder.team.setText(playerList.get(position).getTeam());
     }

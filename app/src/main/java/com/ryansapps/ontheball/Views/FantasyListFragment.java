@@ -28,7 +28,7 @@ public class FantasyListFragment extends Fragment {
 
     private View view;
     private RecyclerView recyclerView;
-    private static String TAG = "RecyclerListFragment";
+    private static String TAG = "FantasyListFragment";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -86,21 +86,18 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_view_league) {
-
-        } else if (id == R.id.nav_my_profile) {
-
-        } else if (id == R.id.nav_settings) {
-
-        } else if (id == R.id.nav_privacy) {
-
-        } else if (id == R.id.nav_help_support) {
-
-        } else if (id == R.id.nav_logout) {
-
+        switch (item.getItemId()){
+            case R.id.nav_view_league:
+                break;
+            case R.id.nav_my_profile:
+                break;
+            case R.id.nav_settings:
+                break;
+            case R.id.nav_help_support:
+                break;
+            case R.id.nav_logout:
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -124,7 +121,7 @@ public class MainActivity extends AppCompatActivity
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 SelectionFragment fragment = new SelectionFragment();
                 transaction.addToBackStack(TAG);
-                transaction.replace(R.id.contentMain, fragment).commit();
+                transaction.replace(R.id.content_main, fragment).commit();
             }
         });
 

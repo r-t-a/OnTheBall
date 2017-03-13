@@ -11,7 +11,5 @@ import retrofit2.http.Path;
  */
 public interface PlayerApi {
     @GET("{choice}/")
-    Call<JSONResponse> getDraftProjections(
-            @Path("choice") String selection
-    );
+    Call<JSONResponse> getDraftProjections(@Path("choice") String selection);
 }
