@@ -2,9 +2,6 @@ package com.ryansapps.ontheball.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
-
 /**
  * Stats available from api (QB):
  *
@@ -25,19 +22,25 @@ import io.realm.annotations.PrimaryKey;
  * @author ryan
  */
 
-public class Players extends RealmObject {
+public class Players {
 
-    @PrimaryKey
-    private long playerId;
+    private String playerId;
+    @SerializedName("displayName")
     private String displayName;
+    @SerializedName("fantasyPoints")
     private String fantasyPoints;
+    @SerializedName("team")
     private String team;
+    @SerializedName("completions")
+    private String completions;
+    @SerializedName("attempts")
+    private String attempts;
 
-    public long getPlayerId() {
+    public String getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(long playerId) {
+    public void setPlayerId(String playerId) {
         this.playerId = playerId;
     }
 
@@ -66,7 +69,19 @@ public class Players extends RealmObject {
     }
 
 
+    public String getCompletions() {
+        return completions;
+    }
 
+    public void setCompletions(String completions) {
+        this.completions = completions;
+    }
 
+    public String getAttempts() {
+        return attempts;
+    }
 
+    public void setAttempts(String attempts) {
+        this.attempts = attempts;
+    }
 }

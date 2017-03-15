@@ -10,13 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ryansapps.ontheball.Adapter.PlayerAdapter;
-import com.ryansapps.ontheball.Model.JSONResponse;
 import com.ryansapps.ontheball.Model.Players;
+import com.ryansapps.ontheball.Model.Projections;
 import com.ryansapps.ontheball.R;
 import com.ryansapps.ontheball.Rest;
 
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,6 +38,7 @@ public class FantasyListFragment extends Fragment {
         return view;
     }
 
+
     private void initViews() {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
@@ -46,21 +46,22 @@ public class FantasyListFragment extends Fragment {
     }
 
     private void loadJson() {
-        Rest.INSTANCE.api().getDraftProjections(getSelection())
-            .enqueue(new Callback<JSONResponse>() {
-                @Override
-                public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
-                    int statusCode = response.code();
+
+        Rest.INSTANCE.api().getDraftProjections(getSelection()).enqueue(new Callback<Projections>() {
+            @Override public void onResponse(Call<Projections> call, Response<Projections> response) {
+                if(response.isSuccess()) {
                     List<Players> players = response.body().getResults();
                     recyclerView.setAdapter(new PlayerAdapter(players, R.layout.player_list_row, view.getContext()));
+                } else {
+                    int statusCode = response.code();
                     Log.i(TAG, "" + statusCode);
                 }
+            }
 
-                @Override
-                public void onFailure(Call<JSONResponse> call, Throwable t) {
-                    Log.e(TAG, t.toString());
-                }
-            });
+            @Override public void onFailure(Call<Projections> call, Throwable t) {
+                Log.i(TAG, "" + call.toString() + " " + t.toString());
+            }
+        });
     }
 
     private String getSelection() {

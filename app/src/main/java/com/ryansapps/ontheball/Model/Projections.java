@@ -1,21 +1,20 @@
 package com.ryansapps.ontheball.Model;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 /**
  * @author ryan
  */
-public class JSONResponse {
+public class Projections {
     @SerializedName("DraftProjections")
-    private List<Players> draftProjections;
+    private List<Players> DraftProjections;
 
     public List<Players> getResults() {
-        return draftProjections;
+        return DraftProjections;
     }
 
     public void setResults(List<Players> draftProjections) {
-        this.draftProjections = draftProjections;
+        this.DraftProjections = draftProjections;
     }
 }

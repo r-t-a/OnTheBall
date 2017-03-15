@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.ryansapps.ontheball.Model.Players;
@@ -22,15 +23,15 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
 
     public static class PlayerViewHolder extends RecyclerView.ViewHolder {
         RelativeLayout playersLayout;
+        ImageView playerIcon;
         TextView playerName;
-        TextView fantasyPoints;
         TextView team;
 
         public PlayerViewHolder(View v) {
             super(v);
             playersLayout = (RelativeLayout) v.findViewById(R.id.player_layout);
+            playerIcon = (ImageView) v.findViewById(R.id.player_image);
             playerName = (TextView) v.findViewById(R.id.name);
-            fantasyPoints = (TextView) v.findViewById(R.id.fantasypoints);
             team = (TextView) v.findViewById(R.id.team);
         }
     }
@@ -50,8 +51,8 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
     @Override
     public void onBindViewHolder(PlayerViewHolder holder, int position) {
         holder.playerName.setText(playerList.get(position).getDisplayName());
-        holder.fantasyPoints.setText(playerList.get(position).getFantasyPoints());
-        holder.team.setText(playerList.get(position).getTeam());
+        holder.team.setText("(" + playerList.get(position).getTeam() + ")");
+        holder.playerIcon.setImageResource(R.mipmap.ic_launcher);
     }
 
     @Override

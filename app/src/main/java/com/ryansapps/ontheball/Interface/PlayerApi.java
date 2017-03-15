@@ -1,7 +1,6 @@
 package com.ryansapps.ontheball.Interface;
 
-import com.ryansapps.ontheball.Model.JSONResponse;
-
+import com.ryansapps.ontheball.Model.Projections;
 import retrofit2.http.GET;
 import retrofit2.Call;
 import retrofit2.http.Path;
@@ -11,5 +10,5 @@ import retrofit2.http.Path;
  */
 public interface PlayerApi {
     @GET("{choice}/")
-    Call<JSONResponse> getDraftProjections(@Path("choice") String selection);
+    Call<Projections> getDraftProjections(@Path("choice") String selection);
 }
