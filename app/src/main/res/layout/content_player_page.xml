@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:id="@+id/player_team_view"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:text="@string/player_team"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toLeftOf="@+id/player_image"
+        app:layout_constraintTop_toBottomOf="@+id/player_number_view"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/player_number_view"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:text="@string/player_number"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/player_image"
+        android:layout_marginRight="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp" />
+
+
+    <TextView
+        android:id="@+id/player_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:text="@string/player_name"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/player_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="255dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="255dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="192dp" />
+
+</android.support.constraint.ConstraintLayout>

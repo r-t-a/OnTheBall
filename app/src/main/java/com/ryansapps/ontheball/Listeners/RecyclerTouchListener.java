@@ -6,6 +6,10 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.ryansapps.ontheball.MainActivity;
+
+import java.io.Console;
+
 /**
  * @author ryan
  */
@@ -44,6 +48,7 @@ public class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
 
     @Override
     public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+        String test = "here";
     }
 
     @Override

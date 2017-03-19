@@ -2,6 +2,8 @@ package com.ryansapps.ontheball.Model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Stats available from api (QB):
  *
@@ -22,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
  * @author ryan
  */
 
-public class Players {
+public class Players implements Serializable{
 
     private String playerId;
     @SerializedName("displayName")
@@ -35,6 +37,16 @@ public class Players {
     private String completions;
     @SerializedName("attempts")
     private String attempts;
+    @SerializedName("passingYards")
+    private String passingYards;
+    @SerializedName("passingTD")
+    private String passingTD;
+    @SerializedName("passingInt")
+    private String passingInt;
+    @SerializedName("rushYards")
+    private String rushYards;
+    @SerializedName("rushTD")
+    private String rushTD;
 
     public String getPlayerId() {
         return playerId;
@@ -83,5 +95,45 @@ public class Players {
 
     public void setAttempts(String attempts) {
         this.attempts = attempts;
+    }
+
+    public String getPassingYards() {
+        return passingYards;
+    }
+
+    public void setPassingYards(String passingYards) {
+        this.passingYards = passingYards;
+    }
+
+    public String getPassingTD() {
+        return passingTD;
+    }
+
+    public void setPassingTD(String passingTD) {
+        this.passingTD = passingTD;
+    }
+
+    public String getPassingInt() {
+        return passingInt;
+    }
+
+    public void setPassingInt(String passingInt) {
+        this.passingInt = passingInt;
+    }
+
+    public String getRushYards() {
+        return rushYards;
+    }
+
+    public void setRushYards(String rushYards) {
+        this.rushYards = rushYards;
+    }
+
+    public String getRushTD() {
+        return rushTD;
+    }
+
+    public void setRushTD(String rushTD) {
+        this.rushTD = rushTD;
     }
 }
